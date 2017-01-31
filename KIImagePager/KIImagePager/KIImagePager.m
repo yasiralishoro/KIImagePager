@@ -69,6 +69,11 @@
 	for (UIView *view in self.subviews) {
 		[view removeFromSuperview];
 	}
+    
+    double radius = self.frame.size.width / 2;
+    self.layer.cornerRadius = radius;
+    self.clipsToBounds = true;
+    
     [self initialize];
 }
 
